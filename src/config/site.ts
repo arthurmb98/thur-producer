@@ -37,7 +37,7 @@ export const siteConfig = {
     display: '(98) 98195-4545',
     e164: '5598981954545',
     message:
-      'Oi Thur! Passei pelo seu site e curti bastante. Queria conversar sobre o seu trabalho.',
+      'Oi Thur! Passei pelo seu site e curti bastante. Gostaria de conversar sobre o seu trabalho.',
   },
   instagram: 'mb_arthur',
   email: 'arthur.mb98@hotmail.com',
