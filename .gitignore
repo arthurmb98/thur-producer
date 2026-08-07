@@ -1,0 +1,17 @@
+node_modules
+dist
+.DS_Store
+*.local
+.vite
+.content-cache
+
+# Originals are large; web-optimized copies live in public/media
+/content/
+/logos/
+/fonts/
+
+# Local env / Vercel
+.env
+.env.*
+!.env.example
+.vercel

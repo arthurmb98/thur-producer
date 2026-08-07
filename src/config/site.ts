@@ -1,0 +1,63 @@
+export const siteConfig = {
+  brand: 'THUR',
+  role: 'Produtor Musical & DJ',
+  headline: 'Som que move a pista. Produção que fecha o set.',
+  tagline:
+    'House, techno e psychedelic trance — versátil na cabine, preciso no estúdio.',
+  aboutTitle: 'Engenheiro. Instrumentista. Produtor.',
+  about: [
+    'Thur é engenheiro de computação com ouvido de músico: guitarrista desde os 13 anos e produtor desde os 22. Essa combinação rara — rigor técnico e sensibilidade de quem já viveu o instrumento — define cada beat, cada transição e cada leitura de pista.',
+    'Hoje o foco é a cena eletrônica, com trânsito livre entre house, techno e psychedelic trance. Versátil na pista, ele entrega energia sob medida para o evento: do sunset ao peak time, do groove quente ao trance hipnótico.',
+    'Ideal para festas, releases autorais, collabs e projetos que pedem alguém que entende tanto de frequência quanto de sentimento.',
+  ],
+  services: [
+    {
+      title: 'DJ para festas e eventos',
+      text: 'Sets sob medida para o público e o horário — house, techno ou psy. Energia controlada, transição limpa, pista aquecida.',
+    },
+    {
+      title: 'Produção de tracks',
+      text: 'Autorais com identidade: do sketch ao master. House, progressive e experimentações que cabem no seu catálogo.',
+    },
+    {
+      title: 'Colaborações',
+      text: 'Parcerias com produtores, selos e artistas. Co-produção, remix e direção criativa com olhar de engenheiro e ouvido de pista.',
+    },
+    {
+      title: 'Direção sonora',
+      text: 'Curadoria e identidade musical para marcas, eventos e projetos que precisam de um universo sonoro coerente.',
+    },
+  ],
+  koletivo: {
+    title: 'Parte do ecossistema Koletivo',
+    text: 'Thur também está por trás do Koletivo — o app que une produtores, equipe e público em eventos de música eletrônica. Da produção à pista, tudo em um só lugar.',
+    cta: 'Conhecer o Koletivo Hub',
+  },
+  whatsapp: {
+    display: '(98) 98195-4545',
+    e164: '5598981954545',
+    message:
+      'Olá Thur! Vi seu site e gostaria de falar sobre uma parceria / booking.',
+  },
+  instagram: 'mb_arthur',
+  email: 'arthur.mb98@hotmail.com',
+  koletivoHubUrl: 'https://koletivo-hub.vercel.app',
+  heroImage: '/hero/sunset2.png',
+  profileImage: '/media/profile/IMG_Thur_reserva.jpg',
+  logo: '/brand/thur-gradient.png',
+  icon: '/brand/t-gradient.png',
+} as const
+
+export function whatsappUrl(e164: string, message?: string) {
+  const base = `https://wa.me/${e164}`
+  if (!message) return base
+  return `${base}?text=${encodeURIComponent(message)}`
+}
+
+export function instagramUrl(handle: string) {
+  return `https://instagram.com/${handle}`
+}
+
+export function mailtoUrl(email: string) {
+  return `mailto:${email}`
+}
