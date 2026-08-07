@@ -2,183 +2,183 @@
 import type { MediaManifest } from '@/lib/media'
 
 export const mediaManifest: MediaManifest = {
-  "generatedAt": "2026-08-07T00:32:23.981Z",
+  "generatedAt": "2026-08-07T01:15:50.903Z",
   "tracks": [
     {
       "id": "track-house-base",
       "kind": "track",
-      "title": "House - base",
-      "filename": "House - base.flac",
-      "format": "flac",
+      "title": "house base",
+      "filename": "house-base.mp3",
+      "format": "mp3",
       "src": "/media/tracks/house-base.mp3",
-      "originalPath": "content/tracks/House - base.flac",
-      "bytes": 19289537
+      "originalPath": "public/media/tracks/house-base.mp3",
+      "bytes": 1996217
     },
     {
       "id": "track-illuminated-path",
       "kind": "track",
-      "title": "Illuminated Path",
-      "filename": "Illuminated_Path.wav",
-      "format": "wav",
+      "title": "illuminated path",
+      "filename": "illuminated-path.mp3",
+      "format": "mp3",
       "src": "/media/tracks/illuminated-path.mp3",
-      "originalPath": "content/tracks/Illuminated_Path.wav",
-      "bytes": 31753496
+      "originalPath": "public/media/tracks/illuminated-path.mp3",
+      "bytes": 2881036
     },
     {
       "id": "track-kfx",
       "kind": "track",
-      "title": "KFX",
-      "filename": "KFX.flac",
-      "format": "flac",
+      "title": "kfx",
+      "filename": "kfx.mp3",
+      "format": "mp3",
       "src": "/media/tracks/kfx.mp3",
-      "originalPath": "content/tracks/KFX.flac",
-      "bytes": 54966951
+      "originalPath": "public/media/tracks/kfx.mp3",
+      "bytes": 5150137
     },
     {
       "id": "track-piano",
       "kind": "track",
-      "title": "Piano",
-      "filename": "Piano.flac",
-      "format": "flac",
+      "title": "piano",
+      "filename": "piano.mp3",
+      "format": "mp3",
       "src": "/media/tracks/piano.mp3",
-      "originalPath": "content/tracks/Piano.flac",
-      "bytes": 51951336
+      "originalPath": "public/media/tracks/piano.mp3",
+      "bytes": 4759345
     },
     {
       "id": "track-soulful-dreams",
       "kind": "track",
-      "title": "Soulful Dreams",
-      "filename": "Soulful_Dreams.wav",
-      "format": "wav",
+      "title": "soulful dreams",
+      "filename": "soulful-dreams.mp3",
+      "format": "mp3",
       "src": "/media/tracks/soulful-dreams.mp3",
-      "originalPath": "content/tracks/Soulful_Dreams.wav",
-      "bytes": 44966744
+      "originalPath": "public/media/tracks/soulful-dreams.mp3",
+      "bytes": 4079743
     }
   ],
   "sets": [
     {
       "id": "set-thur-mershup-techno-x-prog-house",
       "kind": "set",
-      "title": "Thur - Mershup Techno x Prog House",
-      "filename": "Thur - Mershup Techno x Prog House.mp3",
+      "title": "thur mershup techno x prog house",
+      "filename": "thur-mershup-techno-x-prog-house.mp3",
       "format": "mp3",
       "src": "/media/sets/thur-mershup-techno-x-prog-house.mp3",
-      "originalPath": "content/sets/Thur - Mershup Techno x Prog House.mp3",
-      "bytes": 30154009
+      "originalPath": "public/media/sets/thur-mershup-techno-x-prog-house.mp3",
+      "bytes": 2161211
     },
     {
       "id": "set-thur-mix-rec-2022-02-19",
       "kind": "set",
-      "title": "Thur - Mix REC-2022-02-19",
-      "filename": "Thur - Mix REC-2022-02-19.wav",
-      "format": "wav",
+      "title": "thur mix rec 2022 02 19",
+      "filename": "thur-mix-rec-2022-02-19.mp3",
+      "format": "mp3",
       "src": "/media/sets/thur-mix-rec-2022-02-19.mp3",
-      "originalPath": "content/sets/Thur - Mix REC-2022-02-19.wav",
-      "bytes": 483638016
+      "originalPath": "public/media/sets/thur-mix-rec-2022-02-19.mp3",
+      "bytes": 2160856
     },
     {
       "id": "set-thur-tech-house-music-mix01012022",
       "kind": "set",
-      "title": "Thur - Tech House Music mix01012022",
-      "filename": "Thur - Tech House Music mix01012022.mp3",
+      "title": "thur tech house music mix01012022",
+      "filename": "thur-tech-house-music-mix01012022.mp3",
       "format": "mp3",
       "src": "/media/sets/thur-tech-house-music-mix01012022.mp3",
-      "originalPath": "content/sets/Thur - Tech House Music mix01012022.mp3",
-      "bytes": 29237390
+      "originalPath": "public/media/sets/thur-tech-house-music-mix01012022.mp3",
+      "bytes": 2161228
     },
     {
       "id": "set-thur2guima-progressive-sunrise-19-03-22",
       "kind": "set",
-      "title": "Thur2Guima - Progressive Sunrise 19-03-22",
-      "filename": "Thur2Guima - Progressive Sunrise 19-03-22.wav",
-      "format": "wav",
+      "title": "thur2guima progressive sunrise 19 03 22",
+      "filename": "thur2guima-progressive-sunrise-19-03-22.mp3",
+      "format": "mp3",
       "src": "/media/sets/thur2guima-progressive-sunrise-19-03-22.mp3",
-      "originalPath": "content/sets/Thur2Guima - Progressive Sunrise 19-03-22.wav",
-      "bytes": 724817662
+      "originalPath": "public/media/sets/thur2guima-progressive-sunrise-19-03-22.mp3",
+      "bytes": 2160855
     },
     {
       "id": "set-thur2luca-house-music-sunset",
       "kind": "set",
-      "title": "Thur2Luca - House Music Sunset",
-      "filename": "Thur2Luca  - House Music Sunset.mp3",
+      "title": "thur2luca house music sunset",
+      "filename": "thur2luca-house-music-sunset.mp3",
       "format": "mp3",
       "src": "/media/sets/thur2luca-house-music-sunset.mp3",
-      "originalPath": "content/sets/Thur2Luca  - House Music Sunset.mp3",
-      "bytes": 79704503
+      "originalPath": "public/media/sets/thur2luca-house-music-sunset.mp3",
+      "bytes": 2161206
     }
   ],
   "photos": [
     {
       "id": "photo-boat-img-jul-2023-1",
       "kind": "photo",
-      "title": "BOAT IMG JUL 2023 1",
-      "filename": "BOAT_IMG_JUL_2023_1.jpg",
+      "title": "boat img jul 2023 1",
+      "filename": "boat-img-jul-2023-1.jpg",
       "format": "jpg",
       "src": "/media/fotos/boat-img-jul-2023-1.jpg",
-      "originalPath": "content/fotos/BOAT_IMG_JUL_2023_1.jpg",
-      "bytes": 291738
+      "originalPath": "public/media/fotos/boat-img-jul-2023-1.jpg",
+      "bytes": 148552
     },
     {
       "id": "photo-boat-img-jul-2023-2",
       "kind": "photo",
-      "title": "BOAT IMG JUL 2023 2",
-      "filename": "BOAT_IMG_JUL_2023_2.jpg",
+      "title": "boat img jul 2023 2",
+      "filename": "boat-img-jul-2023-2.jpg",
       "format": "jpg",
       "src": "/media/fotos/boat-img-jul-2023-2.jpg",
-      "originalPath": "content/fotos/BOAT_IMG_JUL_2023_2.jpg",
-      "bytes": 281123
+      "originalPath": "public/media/fotos/boat-img-jul-2023-2.jpg",
+      "bytes": 143141
     },
     {
       "id": "photo-boat-img-jul-2023-3",
       "kind": "photo",
-      "title": "BOAT IMG JUL 2023 3",
-      "filename": "BOAT_IMG_JUL_2023_3.jpg",
+      "title": "boat img jul 2023 3",
+      "filename": "boat-img-jul-2023-3.jpg",
       "format": "jpg",
       "src": "/media/fotos/boat-img-jul-2023-3.jpg",
-      "originalPath": "content/fotos/BOAT_IMG_JUL_2023_3.jpg",
-      "bytes": 133513
+      "originalPath": "public/media/fotos/boat-img-jul-2023-3.jpg",
+      "bytes": 62770
     },
     {
       "id": "photo-img-hand",
       "kind": "photo",
-      "title": "IMG hand",
-      "filename": "IMG_hand.jpg",
+      "title": "img hand",
+      "filename": "img-hand.jpg",
       "format": "jpg",
       "src": "/media/fotos/img-hand.jpg",
-      "originalPath": "content/fotos/IMG_hand.jpg",
-      "bytes": 122335
+      "originalPath": "public/media/fotos/img-hand.jpg",
+      "bytes": 67106
     },
     {
       "id": "photo-img-thur",
       "kind": "photo",
-      "title": "IMG Thur",
-      "filename": "IMG_Thur.png",
-      "format": "png",
+      "title": "img thur",
+      "filename": "img-thur.jpg",
+      "format": "jpg",
       "src": "/media/fotos/img-thur.jpg",
-      "originalPath": "content/fotos/IMG_Thur.png",
-      "bytes": 33008485
+      "originalPath": "public/media/fotos/img-thur.jpg",
+      "bytes": 179748
     },
     {
       "id": "photo-img-thur-reserva",
       "kind": "photo",
-      "title": "IMG Thur reserva",
-      "filename": "IMG_Thur_reserva.JPG",
+      "title": "img thur reserva",
+      "filename": "img-thur-reserva.jpg",
       "format": "jpg",
       "src": "/media/fotos/img-thur-reserva.jpg",
-      "originalPath": "content/fotos/IMG_Thur_reserva.JPG",
-      "bytes": 3870216
+      "originalPath": "public/media/fotos/img-thur-reserva.jpg",
+      "bytes": 110462
     }
   ],
   "profile": [
     {
       "id": "profile-img-thur-reserva",
       "kind": "profile",
-      "title": "IMG Thur reserva",
-      "filename": "IMG_Thur_reserva.JPG",
+      "title": "img thur reserva",
+      "filename": "img-thur-reserva.jpg",
       "format": "jpg",
       "src": "/media/profile/img-thur-reserva.jpg",
-      "originalPath": "content/profile-image/IMG_Thur_reserva.JPG",
-      "bytes": 3870216
+      "originalPath": "public/media/profile/img-thur-reserva.jpg",
+      "bytes": 306898
     }
   ],
   "backgrounds": [
@@ -186,11 +186,11 @@ export const mediaManifest: MediaManifest = {
       "id": "background-sunset2",
       "kind": "background",
       "title": "sunset2",
-      "filename": "sunset2.png",
-      "format": "png",
+      "filename": "sunset2.jpg",
+      "format": "jpg",
       "src": "/media/backgrounds/sunset2.jpg",
-      "originalPath": "content/background-images/sunset2.png",
-      "bytes": 743063
+      "originalPath": "public/media/backgrounds/sunset2.jpg",
+      "bytes": 73764
     }
   ]
 }

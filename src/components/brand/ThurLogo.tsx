@@ -50,6 +50,7 @@ export function ThurLogo({
 }: ThurLogoProps) {
   const gradientId = `thur-grad-${variant}-${tone}`
   const fill = tone === 'gradient' ? `url(#${gradientId})` : TONES[tone]
+  const textFill = tone === 'black' ? '#0a0a0c' : '#f5f5f7'
 
   if (variant === 'icon') {
     return (
@@ -65,25 +66,25 @@ export function ThurLogo({
     )
   }
 
+  // Stem right edge ≈ 122; top-bar overhang goes to 188.
+  // Stem right edge = 122; gap = 2× stroke width (36).
   return (
     <svg
-      viewBox="0 0 480 270"
+      viewBox="0 0 420 270"
       className={cn('h-auto w-auto', className)}
       role="img"
       aria-label={title}
     >
       {tone === 'gradient' ? <GradientDefs id={gradientId} /> : null}
-      <g transform="translate(0,0)">
-        <CapsuleT fill={fill} />
-      </g>
+      <CapsuleT fill={fill} />
       <text
-        x="198"
-        y="182"
-        fill={tone === 'black' ? '#0a0a0c' : '#f5f5f7'}
+        x="153"
+        y="186"
+        fill={textFill}
         fontFamily="Syne, ui-sans-serif, system-ui, sans-serif"
-        fontSize="92"
+        fontSize="88"
         fontWeight="700"
-        letterSpacing="4"
+        letterSpacing="1"
       >
         HUR
       </text>

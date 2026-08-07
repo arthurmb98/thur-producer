@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Scans content/ for all media extensions and writes src/data/media-manifest.ts.
- * Prefers optimized files under public/media when present.
+ * Scans public/media for web assets and writes src/data/media-manifest.ts.
+ * Audio is expected as .mp3; images as common web formats.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -10,17 +10,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
 
-const AUDIO_EXT = new Set([
-  '.mp3',
-  '.wav',
-  '.flac',
-  '.m4a',
-  '.aac',
-  '.ogg',
-  '.aiff',
-  '.aif',
-  '.wma',
-])
+const AUDIO_EXT = new Set(['.mp3', '.m4a', '.aac', '.ogg', '.wav', '.flac'])
 const IMAGE_EXT = new Set([
   '.jpg',
   '.jpeg',
@@ -28,24 +18,21 @@ const IMAGE_EXT = new Set([
   '.webp',
   '.gif',
   '.avif',
-  '.bmp',
-  '.tif',
-  '.tiff',
 ])
 
-/** @type {Record<string, { kind: string, publicSub: string }>} */
+/** @type {Record<string, { kind: string, bucket: string }>} */
 const FOLDERS = {
-  tracks: { kind: 'track', publicSub: 'tracks' },
-  sets: { kind: 'set', publicSub: 'sets' },
-  fotos: { kind: 'photo', publicSub: 'fotos' },
-  'profile-image': { kind: 'profile', publicSub: 'profile' },
-  'background-images': { kind: 'background', publicSub: 'backgrounds' },
+  tracks: { kind: 'track', bucket: 'tracks' },
+  sets: { kind: 'set', bucket: 'sets' },
+  fotos: { kind: 'photo', bucket: 'photos' },
+  profile: { kind: 'profile', bucket: 'profile' },
+  backgrounds: { kind: 'background', bucket: 'backgrounds' },
 }
 
 function titleFromFilename(filename) {
   return filename
     .replace(/\.[^.]+$/, '')
-    .replace(/[_]+/g, ' ')
+    .replace(/[-_]+/g, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim()
 }
@@ -70,33 +57,6 @@ function isMedia(ext, kind) {
   return IMAGE_EXT.has(ext)
 }
 
-function findOptimized(publicSub, baseSlug, preferredExts) {
-  const dir = path.join(root, 'public', 'media', publicSub)
-  if (!fs.existsSync(dir)) return null
-  const files = listFiles(dir)
-  for (const ext of preferredExts) {
-    const match = files.find(
-      (f) =>
-        path.parse(f).name === baseSlug ||
-        slugify(path.parse(f).name) === baseSlug,
-    )
-    if (match && path.extname(match).toLowerCase() === ext) {
-      return `/media/${publicSub}/${match}`
-    }
-  }
-  // Any optimized sibling with same slug
-  const any = files.find((f) => slugify(path.parse(f).name) === baseSlug)
-  return any ? `/media/${publicSub}/${any}` : null
-}
-
-function webPreferred(kind, originalExt) {
-  if (kind === 'track' || kind === 'set') {
-    if (originalExt === '.mp3') return ['.mp3']
-    return ['.mp3', originalExt]
-  }
-  return ['.jpg', '.jpeg', '.webp', '.png', originalExt]
-}
-
 function scan() {
   /** @type {Record<string, object[]>} */
   const buckets = {
@@ -107,50 +67,27 @@ function scan() {
     backgrounds: [],
   }
 
-  const bucketKey = {
-    track: 'tracks',
-    set: 'sets',
-    photo: 'photos',
-    profile: 'profile',
-    background: 'backgrounds',
-  }
-
   for (const [folder, meta] of Object.entries(FOLDERS)) {
-    const dir = path.join(root, 'content', folder)
+    const dir = path.join(root, 'public', 'media', folder)
     for (const filename of listFiles(dir)) {
       const ext = path.extname(filename).toLowerCase()
       if (!isMedia(ext, meta.kind)) continue
 
-      const originalPath = path.join('content', folder, filename)
-      const abs = path.join(root, originalPath)
+      const abs = path.join(dir, filename)
       const stat = fs.statSync(abs)
       const baseSlug = slugify(path.parse(filename).name)
-      const preferred = webPreferred(meta.kind, ext)
-      const optimized = findOptimized(meta.publicSub, baseSlug, preferred)
+      const format = ext.replace('.', '')
 
-      // Fallback: serve original via Vite public symlink path we copy on optimize;
-      // until optimized, point to a content bridge URL under /media raw copy if exists,
-      // else use optimize output path expectation.
-      let src = optimized
-      if (!src) {
-        // Place a stable public URL that optimize-media will populate
-        const outExt =
-          meta.kind === 'track' || meta.kind === 'set' ? '.mp3' : '.jpg'
-        src = `/media/${meta.publicSub}/${baseSlug}${outExt}`
-      }
-
-      const item = {
+      buckets[meta.bucket].push({
         id: `${meta.kind}-${baseSlug}`,
         kind: meta.kind,
         title: titleFromFilename(filename),
         filename,
-        format: ext.replace('.', ''),
-        src,
-        originalPath: originalPath.replace(/\\/g, '/'),
+        format,
+        src: `/media/${folder}/${filename}`,
+        originalPath: `public/media/${folder}/${filename}`,
         bytes: stat.size,
-      }
-
-      buckets[bucketKey[meta.kind]].push(item)
+      })
     }
   }
 

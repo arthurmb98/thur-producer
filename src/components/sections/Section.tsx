@@ -30,7 +30,7 @@ export function Section({
       id={id}
       ref={ref}
       className={cn(
-        'relative py-16 sm:py-24',
+        'relative py-10 sm:py-14',
         'reveal',
         visible && 'is-visible',
         className,
@@ -56,11 +56,11 @@ export function Section({
           {title}
         </h2>
         {description ? (
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {description}
           </p>
         ) : null}
-        <div className="mt-10">{children}</div>
+        <div className="mt-6">{children}</div>
       </div>
     </section>
   )

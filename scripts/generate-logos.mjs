@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * Writes modular T / THUR SVG marks and rasterizes PNG via npx @resvg/resvg-js.
+ * Writes modular T / THUR SVG marks and rasterizes transparent PNGs.
+ * Wordmark: HUR starts just past the stem (into top-bar overhang only),
+ * vertically centered with the stem. No background fill.
  */
 import { spawnSync } from 'node:child_process'
 import fs from 'node:fs'
@@ -27,10 +29,14 @@ function capsuleT(fill) {
   <rect x="104" y="70" width="18" height="168" rx="9" fill="${fill}"/>`
 }
 
+/** Stem ends at x≈122; gap = 2× stroke width (36). Centered on stem mid. */
+function hurText(fill) {
+  return `<text x="153" y="186" fill="${fill}" font-family="Arial Black, Helvetica, sans-serif" font-size="88" font-weight="700" letter-spacing="1">HUR</text>`
+}
+
 function iconSvg(fill, withGradient) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 270" width="400" height="540">
-  <rect width="200" height="270" fill="#000000"/>
   ${withGradient ? `<defs>${GRADIENT}</defs>` : ''}
   ${capsuleT(fill)}
 </svg>`
@@ -38,43 +44,23 @@ function iconSvg(fill, withGradient) {
 
 function wordmarkSvg(fill, withGradient, textFill) {
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="960" height="540">
-  <rect width="480" height="270" fill="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 270" width="840" height="540">
   ${withGradient ? `<defs>${GRADIENT}</defs>` : ''}
   ${capsuleT(fill)}
-  <text x="198" y="182" fill="${textFill}" font-family="Arial Black, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="4">HUR</text>
+  ${hurText(textFill)}
 </svg>`
 }
 
-const icons = {
+const all = {
   't-black': iconSvg('#0a0a0c', false),
   't-blue': iconSvg('#058ef2', false),
   't-violet': iconSvg('#9f2db3', false),
   't-gradient': iconSvg('url(#g)', true),
-}
-
-const wordmarks = {
   'thur-black': wordmarkSvg('#0a0a0c', false, '#0a0a0c'),
   'thur-blue': wordmarkSvg('#058ef2', false, '#f5f5f7'),
   'thur-violet': wordmarkSvg('#9f2db3', false, '#f5f5f7'),
   'thur-gradient': wordmarkSvg('url(#g)', true, '#f5f5f7'),
 }
-
-// Black logos need light bg to be visible — use white canvas for black variants
-icons['t-black'] = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 270" width="400" height="540">
-  <rect width="200" height="270" fill="#ffffff"/>
-  ${capsuleT('#0a0a0c')}
-</svg>`
-
-wordmarks['thur-black'] = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="960" height="540">
-  <rect width="480" height="270" fill="#ffffff"/>
-  ${capsuleT('#0a0a0c')}
-  <text x="198" y="182" fill="#0a0a0c" font-family="Arial Black, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="4">HUR</text>
-</svg>`
-
-const all = { ...icons, ...wordmarks }
 
 for (const [name, svg] of Object.entries(all)) {
   const svgPath = path.join(outDir, `${name}.svg`)
@@ -82,7 +68,6 @@ for (const [name, svg] of Object.entries(all)) {
   console.log('wrote', path.relative(root, svgPath))
 }
 
-// Rasterize with local @resvg/resvg-js
 const r = spawnSync(
   process.execPath,
   [
@@ -96,7 +81,8 @@ const dir = ${JSON.stringify(outDir)}
 for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.svg'))) {
   const svg = fs.readFileSync(path.join(dir, file))
   const resvg = new Resvg(svg, {
-    fitTo: { mode: 'width', value: file.startsWith('thur') ? 960 : 400 },
+    fitTo: { mode: 'width', value: file.startsWith('thur') ? 840 : 400 },
+    background: 'rgba(0,0,0,0)',
   })
   const out = path.join(dir, file.replace(/\\.svg$/, '.png'))
   fs.writeFileSync(out, resvg.render().asPng())

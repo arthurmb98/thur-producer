@@ -13,7 +13,6 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "media:scan": "node scripts/scan-media.mjs",
-    "media:optimize": "node scripts/optimize-media.mjs",
     "logos": "node scripts/generate-logos.mjs"
   },
   "dependencies": {

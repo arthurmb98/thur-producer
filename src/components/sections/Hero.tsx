@@ -1,5 +1,4 @@
 import { MessageCircle, Headphones } from 'lucide-react'
-import { ThurLogo } from '@/components/brand/ThurLogo'
 import { Equalizer } from '@/components/media/Equalizer'
 import { Button } from '@/components/ui/button'
 import { siteConfig, whatsappUrl } from '@/config/site'
@@ -17,7 +16,11 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-dvh max-w-5xl flex-col justify-end px-5 pb-14 pt-28 sm:px-8">
         <div className="flex items-end gap-4 animate-fade-up [animation-delay:60ms]">
-          <ThurLogo variant="wordmark" tone="gradient" className="h-14 w-auto sm:h-20" />
+          <img
+            src={siteConfig.logo}
+            alt={siteConfig.brand}
+            className="h-14 w-auto object-contain sm:h-20"
+          />
           <Equalizer active className="mb-2 hidden h-8 sm:flex" bars={7} />
         </div>
 
