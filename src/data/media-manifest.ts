@@ -2,7 +2,7 @@
 import type { MediaManifest } from '@/lib/media'
 
 export const mediaManifest: MediaManifest = {
-  "generatedAt": "2026-08-07T01:15:50.903Z",
+  "generatedAt": "2026-08-07T03:46:03.727Z",
   "tracks": [
     {
       "id": "track-house-base",
@@ -157,16 +157,6 @@ export const mediaManifest: MediaManifest = {
       "src": "/media/fotos/img-thur.jpg",
       "originalPath": "public/media/fotos/img-thur.jpg",
       "bytes": 179748
-    },
-    {
-      "id": "photo-img-thur-reserva",
-      "kind": "photo",
-      "title": "img thur reserva",
-      "filename": "img-thur-reserva.jpg",
-      "format": "jpg",
-      "src": "/media/fotos/img-thur-reserva.jpg",
-      "originalPath": "public/media/fotos/img-thur-reserva.jpg",
-      "bytes": 110462
     }
   ],
   "profile": [
