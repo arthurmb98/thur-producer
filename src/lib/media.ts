@@ -10,6 +10,8 @@ export type MediaItem = {
   src: string
   originalPath: string
   bytes: number
+  /** Optional precomputed waveform peaks JSON (SoundCloud-style). */
+  waveformSrc?: string
 }
 
 export type MediaManifest = {

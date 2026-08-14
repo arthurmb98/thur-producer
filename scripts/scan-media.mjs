@@ -77,8 +77,19 @@ function scan() {
       const stat = fs.statSync(abs)
       const baseSlug = slugify(path.parse(filename).name)
       const format = ext.replace('.', '')
+      const waveformPath = path.join(
+        root,
+        'public',
+        'media',
+        'waveforms',
+        `${baseSlug}.json`,
+      )
+      const waveformSrc = fs.existsSync(waveformPath)
+        ? `/media/waveforms/${baseSlug}.json`
+        : undefined
 
-      buckets[meta.bucket].push({
+      /** @type {Record<string, unknown>} */
+      const item = {
         id: `${meta.kind}-${baseSlug}`,
         kind: meta.kind,
         title: titleFromFilename(filename),
@@ -87,7 +98,10 @@ function scan() {
         src: `/media/${folder}/${filename}`,
         originalPath: `public/media/${folder}/${filename}`,
         bytes: stat.size,
-      })
+      }
+      if (waveformSrc) item.waveformSrc = waveformSrc
+
+      buckets[meta.bucket].push(item)
     }
   }
 

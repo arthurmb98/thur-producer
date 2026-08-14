@@ -13,6 +13,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "media:scan": "node scripts/scan-media.mjs",
+    "media:waveforms": "node scripts/generate-waveforms.mjs",
     "logos": "node scripts/generate-logos.mjs"
   },
   "dependencies": {

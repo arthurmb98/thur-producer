@@ -2,7 +2,7 @@
 import type { MediaManifest } from '@/lib/media'
 
 export const mediaManifest: MediaManifest = {
-  "generatedAt": "2026-08-07T03:46:03.727Z",
+  "generatedAt": "2026-08-14T20:20:58.235Z",
   "tracks": [
     {
       "id": "track-house-base",
@@ -12,7 +12,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/tracks/house-base.mp3",
       "originalPath": "public/media/tracks/house-base.mp3",
-      "bytes": 1996217
+      "bytes": 1996217,
+      "waveformSrc": "/media/waveforms/house-base.json"
     },
     {
       "id": "track-illuminated-path",
@@ -22,7 +23,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/tracks/illuminated-path.mp3",
       "originalPath": "public/media/tracks/illuminated-path.mp3",
-      "bytes": 2881036
+      "bytes": 2881036,
+      "waveformSrc": "/media/waveforms/illuminated-path.json"
     },
     {
       "id": "track-kfx",
@@ -32,7 +34,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/tracks/kfx.mp3",
       "originalPath": "public/media/tracks/kfx.mp3",
-      "bytes": 5150137
+      "bytes": 5150137,
+      "waveformSrc": "/media/waveforms/kfx.json"
     },
     {
       "id": "track-piano",
@@ -42,7 +45,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/tracks/piano.mp3",
       "originalPath": "public/media/tracks/piano.mp3",
-      "bytes": 4759345
+      "bytes": 4759345,
+      "waveformSrc": "/media/waveforms/piano.json"
     },
     {
       "id": "track-soulful-dreams",
@@ -52,7 +56,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/tracks/soulful-dreams.mp3",
       "originalPath": "public/media/tracks/soulful-dreams.mp3",
-      "bytes": 4079743
+      "bytes": 4079743,
+      "waveformSrc": "/media/waveforms/soulful-dreams.json"
     }
   ],
   "sets": [
@@ -64,7 +69,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur-mershup-techno-x-prog-house.mp3",
       "originalPath": "public/media/sets/thur-mershup-techno-x-prog-house.mp3",
-      "bytes": 2161211
+      "bytes": 2161211,
+      "waveformSrc": "/media/waveforms/thur-mershup-techno-x-prog-house.json"
     },
     {
       "id": "set-thur-mix-rec-2022-02-19",
@@ -74,7 +80,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur-mix-rec-2022-02-19.mp3",
       "originalPath": "public/media/sets/thur-mix-rec-2022-02-19.mp3",
-      "bytes": 2160856
+      "bytes": 2160856,
+      "waveformSrc": "/media/waveforms/thur-mix-rec-2022-02-19.json"
     },
     {
       "id": "set-thur-tech-house-music-mix01012022",
@@ -84,7 +91,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur-tech-house-music-mix01012022.mp3",
       "originalPath": "public/media/sets/thur-tech-house-music-mix01012022.mp3",
-      "bytes": 2161228
+      "bytes": 2161228,
+      "waveformSrc": "/media/waveforms/thur-tech-house-music-mix01012022.json"
     },
     {
       "id": "set-thur2guima-progressive-sunrise-19-03-22",
@@ -94,7 +102,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur2guima-progressive-sunrise-19-03-22.mp3",
       "originalPath": "public/media/sets/thur2guima-progressive-sunrise-19-03-22.mp3",
-      "bytes": 2160855
+      "bytes": 2160855,
+      "waveformSrc": "/media/waveforms/thur2guima-progressive-sunrise-19-03-22.json"
     },
     {
       "id": "set-thur2luca-house-music-sunset",
@@ -104,7 +113,8 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur2luca-house-music-sunset.mp3",
       "originalPath": "public/media/sets/thur2luca-house-music-sunset.mp3",
-      "bytes": 2161206
+      "bytes": 2161206,
+      "waveformSrc": "/media/waveforms/thur2luca-house-music-sunset.json"
     }
   ],
   "photos": [
