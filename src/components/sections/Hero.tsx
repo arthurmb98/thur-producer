@@ -54,16 +54,7 @@ export function Hero() {
             </a>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a
-              href={
-                siteConfig.useInlineAudioPlayers
-                  ? '#tracks'
-                  : siteConfig.drive.tracks
-              }
-              {...(siteConfig.useInlineAudioPlayers
-                ? {}
-                : { target: '_blank', rel: 'noreferrer' })}
-            >
+            <a href="#tracks">
               <Headphones className="size-5" />
               Ouvir tracks
             </a>
