@@ -42,6 +42,18 @@ export const siteConfig = {
   instagram: 'mb_arthur',
   email: 'arthur.mb98@hotmail.com',
   koletivoHubUrl: 'https://koletivo-hub.vercel.app',
+  /**
+   * Temporary: audio is hosted on Drive to avoid Vercel Fast Data Transfer.
+   * When moving to object storage, set `useInlineAudioPlayers` to true and
+   * point manifest `src` to the storage CDN URLs.
+   */
+  useInlineAudioPlayers: false,
+  drive: {
+    tracks:
+      'https://drive.google.com/drive/folders/111dTe6HkhEHT3QkOeec8We5GP4Js9NJB?usp=drive_link',
+    sets:
+      'https://drive.google.com/drive/folders/1uno7KtdYjUTI3_RBwe5nMXQcxQ0DpbXS?usp=drive_link',
+  },
   heroImage: '/hero/sunset2.png',
   profileImage: '/media/profile/IMG_Thur_reserva.jpg',
   logo: '/brand/thur-gradient.png',
