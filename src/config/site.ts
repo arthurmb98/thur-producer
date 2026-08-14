@@ -47,7 +47,7 @@ export const siteConfig = {
    * When moving to object storage, set `useInlineAudioPlayers` to true and
    * point manifest `src` to the storage CDN URLs.
    */
-  useInlineAudioPlayers: false,
+  useInlineAudioPlayers: true,
   drive: {
     tracks:
       'https://drive.google.com/drive/folders/111dTe6HkhEHT3QkOeec8We5GP4Js9NJB?usp=drive_link',
