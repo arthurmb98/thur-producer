@@ -4,6 +4,9 @@ dist
 *.local
 .vite
 
+# Originals are large; web-optimized copies live in public/media
+content/
+
 # Local env / Vercel
 .env
 .env.*

@@ -2,7 +2,7 @@
 import type { MediaManifest } from '@/lib/media'
 
 export const mediaManifest: MediaManifest = {
-  "generatedAt": "2026-08-14T20:20:58.235Z",
+  "generatedAt": "2026-08-15T10:30:40.396Z",
   "tracks": [
     {
       "id": "track-house-base",
@@ -69,7 +69,7 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur-mershup-techno-x-prog-house.mp3",
       "originalPath": "public/media/sets/thur-mershup-techno-x-prog-house.mp3",
-      "bytes": 2161211,
+      "bytes": 30096870,
       "waveformSrc": "/media/waveforms/thur-mershup-techno-x-prog-house.json"
     },
     {
@@ -80,7 +80,7 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur-mix-rec-2022-02-19.mp3",
       "originalPath": "public/media/sets/thur-mix-rec-2022-02-19.mp3",
-      "bytes": 2160856,
+      "bytes": 43868689,
       "waveformSrc": "/media/waveforms/thur-mix-rec-2022-02-19.json"
     },
     {
@@ -91,7 +91,7 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur-tech-house-music-mix01012022.mp3",
       "originalPath": "public/media/sets/thur-tech-house-music-mix01012022.mp3",
-      "bytes": 2161228,
+      "bytes": 29211650,
       "waveformSrc": "/media/waveforms/thur-tech-house-music-mix01012022.json"
     },
     {
@@ -102,7 +102,7 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur2guima-progressive-sunrise-19-03-22.mp3",
       "originalPath": "public/media/sets/thur2guima-progressive-sunrise-19-03-22.mp3",
-      "bytes": 2160855,
+      "bytes": 65744253,
       "waveformSrc": "/media/waveforms/thur2guima-progressive-sunrise-19-03-22.json"
     },
     {
@@ -113,7 +113,7 @@ export const mediaManifest: MediaManifest = {
       "format": "mp3",
       "src": "/media/sets/thur2luca-house-music-sunset.mp3",
       "originalPath": "public/media/sets/thur2luca-house-music-sunset.mp3",
-      "bytes": 2161206,
+      "bytes": 79645927,
       "waveformSrc": "/media/waveforms/thur2luca-house-music-sunset.json"
     }
   ],
