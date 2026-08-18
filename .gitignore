@@ -4,7 +4,7 @@ dist
 *.local
 .vite
 
-# Originals are large; web-optimized copies live in public/media
+# Originals (unused by the site; web copies live in public/media)
 content/
 
 # Local env / Vercel

@@ -52,13 +52,7 @@ function wordmarkSvg(fill, withGradient, textFill) {
 }
 
 const all = {
-  't-black': iconSvg('#0a0a0c', false),
-  't-blue': iconSvg('#058ef2', false),
-  't-violet': iconSvg('#9f2db3', false),
   't-gradient': iconSvg('url(#g)', true),
-  'thur-black': wordmarkSvg('#0a0a0c', false, '#0a0a0c'),
-  'thur-blue': wordmarkSvg('#058ef2', false, '#f5f5f7'),
-  'thur-violet': wordmarkSvg('#9f2db3', false, '#f5f5f7'),
   'thur-gradient': wordmarkSvg('url(#g)', true, '#f5f5f7'),
 }
 

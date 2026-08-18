@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
 
-const AUDIO_EXT = new Set(['.mp3', '.m4a', '.aac', '.ogg', '.wav', '.flac'])
+const AUDIO_EXT = new Set(['.mp3', '.m4a', '.aac', '.ogg'])
 const IMAGE_EXT = new Set([
   '.jpg',
   '.jpeg',

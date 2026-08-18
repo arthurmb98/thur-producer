@@ -2,7 +2,7 @@
 import type { MediaManifest } from '@/lib/media'
 
 export const mediaManifest: MediaManifest = {
-  "generatedAt": "2026-08-15T10:30:40.396Z",
+  "generatedAt": "2026-08-18T14:55:08.971Z",
   "tracks": [
     {
       "id": "track-house-base",
@@ -36,6 +36,17 @@ export const mediaManifest: MediaManifest = {
       "originalPath": "public/media/tracks/kfx.mp3",
       "bytes": 5150137,
       "waveformSrc": "/media/waveforms/kfx.json"
+    },
+    {
+      "id": "track-lucido",
+      "kind": "track",
+      "title": "lucido",
+      "filename": "lucido.mp3",
+      "format": "mp3",
+      "src": "/media/tracks/lucido.mp3",
+      "originalPath": "public/media/tracks/lucido.mp3",
+      "bytes": 3964386,
+      "waveformSrc": "/media/waveforms/lucido.json"
     },
     {
       "id": "track-piano",
@@ -181,16 +192,5 @@ export const mediaManifest: MediaManifest = {
       "bytes": 306898
     }
   ],
-  "backgrounds": [
-    {
-      "id": "background-sunset2",
-      "kind": "background",
-      "title": "sunset2",
-      "filename": "sunset2.jpg",
-      "format": "jpg",
-      "src": "/media/backgrounds/sunset2.jpg",
-      "originalPath": "public/media/backgrounds/sunset2.jpg",
-      "bytes": 73764
-    }
-  ]
+  "backgrounds": []
 }
