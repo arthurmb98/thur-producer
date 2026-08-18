@@ -30,8 +30,10 @@ export const siteConfig = {
   ],
   koletivo: {
     title: 'Parte do ecossistema Koletivo',
-    text: 'Thur também está por trás do Koletivo — o app que une produtores, equipe e público em eventos de música eletrônica. Da produção à pista, tudo em um só lugar.',
-    cta: 'Conhecer o Koletivo Hub',
+    text: 'A Koletivo Hub é uma fábrica de software: transforma a identidade de um negócio em site, app ou sistema — com design contemporâneo, tech de ponta e um investimento bem abaixo do mercado. Este site é um dos projetos da casa.',
+    detail:
+      'O app Koletivo nasceu primeiro, para reunir produção, equipe e público em eventos de música eletrônica. Hoje ele é um caso de uso: o Hub é o estúdio que constrói os produtos digitais — e o THUR faz parte disso.',
+    cta: 'Conhecer a Koletivo Hub',
   },
   whatsapp: {
     display: '(98) 98195-4545',

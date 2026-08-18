@@ -16,9 +16,7 @@ export function Koletivo() {
         <div className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-primary/25 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-20 -left-10 size-56 rounded-full bg-violet/25 blur-3xl" />
         <p className="relative max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg">
-          Do produtor ao dancefloor — o Koletivo conecta quem organiza, quem
-          trabalha no evento e quem vive a experiência. Conheça a landing e o
-          universo do app.
+          {siteConfig.koletivo.detail}
         </p>
         <div className="relative mt-8">
           <Button variant="default" size="lg" asChild>
