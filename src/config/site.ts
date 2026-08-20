@@ -32,7 +32,7 @@ export const siteConfig = {
     title: 'Parte do ecossistema Koletivo',
     text: 'A Koletivo Hub é uma fábrica de software: transforma a identidade de um negócio em site, app ou sistema — com design contemporâneo, tech de ponta e um investimento bem abaixo do mercado. Este site é um dos projetos da casa.',
     detail:
-      'O app Koletivo nasceu primeiro, para reunir produção, equipe e público em eventos de música eletrônica. Hoje ele é um caso de uso: o Hub é o estúdio que constrói os produtos digitais — e o THUR faz parte disso.',
+      'O Koletivo é o orquestrador de negócios do ecossistema: estoque, custos, caixa, ingressos e QR — da festa à farmácia, do restaurante à padaria — e o THUR faz parte disso.',
     cta: 'Conhecer a Koletivo Hub',
   },
   whatsapp: {
